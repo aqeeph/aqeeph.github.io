@@ -7,31 +7,30 @@
             <!DOCTYPE html>
   </head>
   <body>
-    <h1>Hello, World!</h1>
-    <h4 id='date'></h4>
+   <script async src="./javascript/index.js"></script>
+ <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v9.0'
+          });
+        };
 
-    <div class="image-section">
-      <div class="section-style">
-        <img src="https://source.unsplash.com/random/400x200" alt="" />
-        <p>A random image courtesy of unsplash.com.</p>
-      </div>
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/tr_TR/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
 
-      <div class="section-style">
-        <img src="https://source.unsplash.com/random/400x200" alt="" />
-        <p>A random image courtesy of unsplash.com.</p>
-      </div>
-    </div>
-
-    <div class="image-section">
-      <div class="section-style">
-        <img src="https://source.unsplash.com/random/400x200" alt="" />
-        <p>A random image courtesy of unsplash.com.</p>
-      </div>
-
-      <div class="section-style">
-        <img src="https://source.unsplash.com/random/400x200" alt="" />
-        <p>A random image courtesy of unsplash.com.</p>
-      </div>
-    </div>
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="100178018697531"
+  logged_in_greeting="Merhaba 👋 . Nasıl yardımcı olabiliriz ? "
+  logged_out_greeting="Merhaba 👋 . Nasıl yardımcı olabiliriz ? ">
   </body>
 </html>
